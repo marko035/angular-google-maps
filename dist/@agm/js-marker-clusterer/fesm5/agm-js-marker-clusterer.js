@@ -227,6 +227,14 @@ var AgmMarkerCluster = /** @class */ (function () {
                 name: 'mouseover',
                 handler: function (args) { return _this.mouseOver.emit(args); },
             },
+            {
+                name: 'clustermouseover',
+                handler: function (args) { return _this.mouseOver.emit(args); },
+            },
+            {
+                name: 'onMouseoverCluster',
+                handler: function (args) { return _this.mouseOver.emit(args); },
+            },
         ];
         handlers.forEach(function (obj) {
             var os = _this._clusterManager.createClusterEventObservable(obj.name).subscribe(obj.handler);
